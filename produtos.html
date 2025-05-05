@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nossos Produtos - Cheirinho de Bolo</title>
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    .product-category {
+      margin-bottom: 3rem;
+    }
+    .category-title {
+      border-bottom: 3px solid #dc3545;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
+    .card-product {
+      transition: transform 0.3s;
+      height: 100%;
+    }
+    .card-product:hover {
+      transform: translateY(-10px);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="bi bi-cake2"></i> Cheirinho de Bolo
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="produtos.html">Produtos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contato.html">Contato</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cadastro.html"><i class="bi bi-person"></i> Login/Cadastro</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Produtos -->
+  <section class="py-5">
+    <div class="container">
+      <h1 class="text-center mb-5">Nossos Produtos</h1>
+      
+      <!-- Bolos -->
+      <div class="product-category">
+        <h2 class="category-title">Bolos</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card card-product">
+              <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587" class="card-img-top" alt="Bolo de Chocolate">
+              <div class="card-body">
+                <h5 class="card-title">Bolo de Chocolate</h5>
+                <p class="card-text">Massa de chocolate úmida com recheio de brigadeiro e cobertura de ganache.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-danger fw-bold">A partir de R$ 120,00</span>
+                  <a href="#" class="btn btn-outline-danger">Encomendar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-product">
+              <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b" class="card-img-top" alt="Bolo de Cenoura">
+              <div class="card-body">
+                <h5 class="card-title">Bolo de Cenoura</h5>
+                <p class="card-text">Massa fofinha de cenoura com cobertura de chocolate.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-danger fw-bold">A partir de R$ 100,00</span>
+                  <a href="#" class="btn btn-outline-danger">Encomendar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-product">
+              <img src="https://images.unsplash.com/photo-1558301211-0d8c00861aad" class="card-img-top" alt="Bolo de Red Velvet">
+              <div class="card-body">
+                <h5 class="card-title">Bolo Red Velvet</h5>
+                <p class="card-text">Massa aveludada vermelha com recheio de cream cheese.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-danger fw-bold">A partir de R$ 150,00</span>
+                  <a href="#" class="btn btn-outline-danger">Encomendar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Doces -->
+      <div class="product-category">
+        <h2 class="category-title">Doces</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card card-product">
+              <img src="https://images.unsplash.com/photo-1558326567-98ae2405596b" class="card-img-top" alt="Cupcakes">
+              <div class="card-body">
+                <h5 class="card-title">Cupcakes</h5>
+                <p class="card-text">Variedade de sabores e decorações personalizadas.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-danger fw-bold">R$ 8,00/un</span>
+                  <a href="#" class="btn btn-outline-danger">Encomendar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-product">
+              <img src="https://images.unsplash.com/photo-1495147466023-ac5c588e2e94" class="card-img-top" alt="Brigadeiros">
+              <div class="card-body">
+                <h5 class="card-title">Brigadeiros Gourmet</h5>
+                <p class="card-text">Tradicionais e sabores especiais como morango, ninho e café.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-danger fw-bold">R$ 3,00/un</span>
+                  <a href="#" class="btn btn-outline-danger">Encomendar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-product">
+              <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e" class="card-img-top" alt="Brownie">
+              <div class="card-body">
+                <h5 class="card-title">Brownie</h5>
+                <p class="card-text">Brownie de chocolate com nozes, servido quente com sorvete.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-danger fw-bold">R$ 12,00/un</span>
+                  <a href="#" class="btn btn-outline-danger">Encomendar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Salgados -->
+      <div class="product-category">
+        <h2 class="category-title">Salgados</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card card-product">
+              <img src="https://images.unsplash.com/photo-1517686469429-8bdb88b9f907" class="card-img-top" alt="Salgados Assados">
+              <div class="card-body">
+                <h5 class="card-title">Salgados Assados</h5>
+                <p class="card-text">Coxinha, empada, quiche e folhados diversos.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-danger fw-bold">R$ 5,00/un</span>
+                  <a href="#" class="btn btn-outline-danger">Encomendar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-product">
+              <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950" class="card-img-top" alt="Mini Pizzas">
+              <div class="card-body">
+                <h5 class="card-title">Mini Pizzas</h5>
+                <p class="card-text">Diversos sabores em tamanho individual.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-danger fw-bold">R$ 7,00/un</span>
+                  <a href="#" class="btn btn-outline-danger">Encomendar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-product">
+              <img src="https://images.unsplash.com/photo-1603105037880-880cd4edfb0d" class="card-img-top" alt="Tábua de Frios">
+              <div class="card-body">
+                <h5 class="card-title">Tábuas de Frios</h5>
+                <p class="card-text">Seleção de queijos, salames e acompanhamentos.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-danger fw-bold">A partir de R$ 80,00</span>
+                  <a href="#" class="btn btn-outline-danger">Encomendar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Cheirinho de Bolo</h5>
+          <p>Confeitaria artesanal especializada em bolos, doces e salgados para todos os momentos especiais.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Contato</h5>
+          <p><i class="bi bi-geo-alt"></i> Rua dos Sabores, 123 - Centro</p>
+          <p><i class="bi bi-telephone"></i> (21) 98765-4321</p>
+          <p><i class="bi bi-envelope"></i> contato@cheirinhodebolo.com</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Redes Sociais</h5>
+          <a href="#" class="text-white me-2"><i class="bi bi-facebook fs-4"></i></a>
+          <a href="#" class="text-white me-2"><i class="bi bi-instagram fs-4"></i></a>
+          <a href="#" class="text-white me-2"><i class="bi bi-whatsapp fs-4"></i></a>
+        </div>
+      </div>
+      <hr>
+      <div class="text-center">
+        <p class="mb-0">&copy; 2023 Cheirinho de Bolo. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

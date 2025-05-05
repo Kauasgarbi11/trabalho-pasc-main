@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cheirinho de Bolo - Confeitaria Artesanal</title>
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #e63946;
+      --secondary-color: #ff9a8b;
+      --light-color: #fff0f5;
+      --dark-color: #2b2d42;
+      --accent-color: #ff686b;
+    }
+    
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--dark-color);
+    }
+    
+    .logo-font {
+      font-family: 'Pacifico', cursive;
+    }
+    
+    .navbar {
+      background-color: var(--primary-color) !important;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .navbar-brand {
+      font-family: 'Pacifico', cursive;
+      font-size: 1.8rem;
+      color: white !important;
+    }
+    
+    .nav-link {
+      font-weight: 500;
+      margin: 0 10px;
+      position: relative;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: white;
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    .hero-section {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                  url('https://images.unsplash.com/photo-1552689486-f6773047d19f') no-repeat center center;
+      background-size: cover;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+      position: relative;
+    }
+    
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(to top, var(--light-color), transparent);
+    }
+    
+    .hero-content {
+      z-index: 1;
+    }
+    
+    .hero-title {
+      font-family: 'Pacifico', cursive;
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+    
+    .btn-custom {
+      background-color: var(--accent-color);
+      border: none;
+      padding: 12px 30px;
+      font-weight: 500;
+      border-radius: 50px;
+      transition: all 0.3s;
+    }
+    
+    .btn-custom:hover {
+      background-color: var(--primary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .section-title {
+      font-family: 'Pacifico', cursive;
+      color: var(--primary-color);
+      margin-bottom: 3rem;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: 3px;
+      bottom: -10px;
+      left: 0;
+      background-color: var(--secondary-color);
+    }
+    
+    .card-product {
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s;
+      height: 100%;
+    }
+    
+    .card-product:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .card-title {
+      font-weight: 700;
+      color: var(--dark-color);
+    }
+    
+    .price {
+      color: var(--primary-color);
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+    
+    .btn-outline-custom {
+      color: var(--primary-color);
+      border-color: var(--primary-color);
+      border-radius: 50px;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+    
+    .btn-outline-custom:hover {
+      background-color: var(--primary-color);
+      color: white;
+    }
+    
+    .about-section {
+      background-color: var(--light-color);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .about-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+      background-size: cover;
+      opacity: 0.1;
+      z-index: 0;
+    }
+    
+    .about-content {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .testimonial-card {
+      border-radius: 15px;
+      border: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: all 0.3s;
+    }
+    
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    
+    .stars {
+      color: #ffc107;
+    }
+    
+    footer {
+      background-color: var(--dark-color);
+      color: white;
+    }
+    
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .footer-links a:hover {
+      color: var(--secondary-color);
+    }
+    
+    .social-icon {
+      font-size: 1.5rem;
+      margin-right: 15px;
+      color: white;
+      transition: color 0.3s;
+    }
+    
+    .social-icon:hover {
+      color: var(--secondary-color);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <i class="bi bi-cake2 me-2"></i> Cheirinho de Bolo
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="produtos.html">Produtos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contato.html">Contato</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cadastro.html"><i class="bi bi-person"></i> Login/Cadastro</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-content">
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class="hero-title">Cheirinho de Bolo</h1>
+          <p class="lead fs-4">Confeitaria artesanal com os melhores bolos, doces e salgados da região</p>
+          <a href="produtos.html" class="btn btn-custom btn-lg">Nossos Produtos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Destaques -->
+  <section class="py-5">
+    <div class="container py-5">
+      <h2 class="text-center section-title">Nossos Destaques</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card card-product h-100">
+            <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d" class="card-img-top" alt="Bolo de Chocolate">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Bolo de Chocolate</h5>
+              <p class="card-text flex-grow-1">Nosso famoso bolo de chocolate com recheio de brigadeiro e cobertura de ganache.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="price">R$ 120,00</span>
+                <a href="#" class="btn btn-outline-custom">Encomendar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-product h-100">
+            <img src="https://images.unsplash.com/photo-1558326567-98ae2405596b" class="card-img-top" alt="Cupcakes">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Cupcakes Variados</h5>
+              <p class="card-text flex-grow-1">Deliciosos cupcakes com diversos sabores e decorações personalizadas.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="price">R$ 8,00/un</span>
+                <a href="#" class="btn btn-outline-custom">Encomendar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-product h-100">
+            <img src="https://images.unsplash.com/photo-1517686469429-8bdb88b9f907" class="card-img-top" alt="Salgados">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Salgados Finos</h5>
+              <p class="card-text flex-grow-1">Variedade de salgados para festas e eventos, assados na hora.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="price">R$ 5,00/un</span>
+                <a href="#" class="btn btn-outline-custom">Encomendar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre Nós -->
+  <section class="about-section py-5">
+    <div class="container py-5 about-content">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <h2 class="section-title">Sobre Nós</h2>
+          <p class="lead">A Cheirinho de Bolo nasceu do amor pela confeitaria e pelo desejo de trazer sabores especiais para momentos especiais.</p>
+          <p>Nossos produtos são feitos com ingredientes selecionados e muito carinho. Trabalhamos com encomendas para festas, eventos corporativos e datas comemorativas. Cada produto é feito artesanalmente para garantir qualidade e sabor inigualáveis.</p>
+          <a href="contato.html" class="btn btn-custom mt-3">Fale Conosco</a>
+        </div>
+        <div class="col-lg-6">
+          <img src="https://images.unsplash.com/photo-1603532648955-039310d9ed75" class="img-fluid rounded shadow-lg" alt="Confeiteira trabalhando">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section class="py-5 bg-white">
+    <div class="container py-5">
+      <h2 class="text-center section-title">O que dizem nossos clientes</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 testimonial-card">
+            <div class="card-body">
+              <div class="stars mb-3">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="card-text">"O bolo de chocolate foi o destaque da festa da minha filha! Todos elogiaram e queriam saber onde comprei."</p>
+              <div class="d-flex align-items-center mt-4">
+                <div class="ms-3">
+                  <h6 class="mb-0">Ana Clara</h6>
+                  <small class="text-muted">Cliente desde 2021</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 testimonial-card">
+            <div class="card-body">
+              <div class="stars mb-3">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+              <p class="card-text">"Os salgados são incríveis! Pedimos para o aniversário da empresa e foi um sucesso. Recomendo!"</p>
+              <div class="d-flex align-items-center mt-4">
+                <div class="ms-3">
+                  <h6 class="mb-0">Carlos Eduardo</h6>
+                  <small class="text-muted">Cliente corporativo</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 testimonial-card">
+            <div class="card-body">
+              <div class="stars mb-3">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="card-text">"Os cupcakes são lindos e deliciosos! Minha filha amou o tema unicórnio que fizemos para sua festa."</p>
+              <div class="d-flex align-items-center mt-4">
+                <div class="ms-3">
+                  <h6 class="mb-0">Mariana Santos</h6>
+                  <small class="text-muted">Cliente desde 2022</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5">
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h3 class="logo-font text-white mb-4">
+            <i class="bi bi-cake2 me-2"></i> Cheirinho de Bolo
+          </h3>
+          <p>Confeitaria artesanal especializada em bolos, doces e salgados para todos os momentos especiais.</p>
+        </div>
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h4 class="text-white mb-4">Contato</h4>
+          <p><i class="bi bi-geo-alt me-2"></i> Rua dos Sabores, 123 - Centro</p>
+          <p><i class="bi bi-telephone me-2"></i> (21) 98765-4321</p>
+          <p><i class="bi bi-envelope me-2"></i> contato@cheirinhodebolo.com</p>
+        </div>
+        <div class="col-lg-4">
+          <h4 class="text-white mb-4">Redes Sociais</h4>
+          <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+      <hr class="my-4 bg-light">
+      <div class="text-center">
+        <p class="mb-0">&copy; 2023 Cheirinho de Bolo. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
